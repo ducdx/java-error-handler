@@ -13,7 +13,8 @@ public class RetrofitMatcherFactory {
 
     /**
      * Creates a {@link MatcherFactory} that checks HTTP statuses
-     * @return
+     * @return a new {@link MatcherFactory} that matches the given httpStatusCode with
+     *         the Throwable's status code.
      */
     public static MatcherFactory<Integer> create() {
         return new MatcherFactory<Integer>() {
@@ -29,7 +30,8 @@ public class RetrofitMatcherFactory {
 
     /**
      * Creates a {@link MatcherFactory} that checks if HTTP status is in given {@link Range}
-     * @return
+     * @return a new {@link MatcherFactory} that checks if the given Range contains
+     *         the Throwable's status code.
      */
     public static MatcherFactory<Range> createRange() {
         return new MatcherFactory<Range>() {
